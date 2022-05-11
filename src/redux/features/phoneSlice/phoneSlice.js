@@ -21,7 +21,7 @@ const phoneSlice = createSlice({
   },
 });
 
-export default phoneSlice.reducer;
+export const phoneReducer = phoneSlice.reducer;
 
 export const {
   addDigit: addDigitActionCreator,
