@@ -9,7 +9,10 @@ const phoneSlice = createSlice({
   reducers: {
     addDigit: (state, action) => ({
       ...state,
-      phoneNumber: [...state.phoneNumber, action.payload],
+      phoneNumber:
+        state.phoneNumber.length < 9
+          ? [...state.phoneNumber, action.payload]
+          : [...state.phoneNumber],
     }),
     removeLastDigit: (state) => ({
       ...state,
